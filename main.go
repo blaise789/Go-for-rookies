@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
+	// "maps"
 	// "slices"
 )
-func main(){
 /*	fmt.Println("1+1=",1+1)
 	fmt.Print("1+1=",1+1)
     fmt.Println("go"+"lang")
@@ -131,15 +131,68 @@ if slices.Equal(t2,t1){
 // 	}
 // }
 // fmt.Print(twoD)
+/*
 m:=make(map[string] int)
 m["k1"]=45
 m["k2"]=40
-fmt.Println("map:",m)
+fmt.Println("map:",m,len(m))
 v1:=m["k1"]
 fmt.Println("v1:",v1)
 v3:=m["k3"]
 fmt.Println(v3)
 
+delete(m,"k2")
+fmt.Println(m)
+clear(m)
+fmt.Print(m)
+_,prs:=m["k2"]
+fmt.Println("prs",prs)
+n:=map[string] int{"foo":1,"bar":2}
+fmt.Println("map",n)
+n2:=map[string] int{"foo":1,"bar":2}
+if maps.Equal(n,n2){
+	fmt.Println("n==n2")
+}
+*/
+// func plus( a int ,b int )int{
+// 	return a+b
+// }
+// func plusPlus(a,b,c int ) int {
+// 	return a+b+c
+// }
+
+// func vals() (int,int){
+// 	return 3,7
+// }
+
+// variadic fucntion (trailing arguments)
+func sum(nums ...int){
+	fmt.Println(nums)
+	 var total int
+	// for i:=0;i<len(nums);i++{
+	// 	total+=nums[i]
+	// }
+	for _,num := range nums{
+		total+=num
+
+	}
+	print(total)
+
+}
+func main(){
+	// res:=plus(1,2)
+	// fmt.Println("1+2",res)
+	// res=plusPlus(1,2,3)
+	// fmt.Println(res)
+	// a,b:=vals()
+	// fmt.Println(a,b)
+
+
+sum(1,2,4)
+
+numbers:=[]int {1,2,6,8}
+sum(numbers...)
 
 } 
+
 	
